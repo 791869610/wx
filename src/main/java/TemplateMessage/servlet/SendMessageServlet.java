@@ -2,6 +2,7 @@ package TemplateMessage.servlet;
 
 import TemplateMessage.until.AuthUtil;
 import net.sf.json.JSONObject;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -37,7 +38,7 @@ public class SendMessageServlet extends HttpServlet {
         }
 
         //模板消息推送
-        JSONObject jsonResult_Send = AuthUtil.sendTemplateMessage(APPID,APPSECRET,acceptAttribute,template_id,openid,url,appid,pagepath,color);
+        JSONObject jsonObject = AuthUtil.sendTemplateMessage(APPID, APPSECRET, acceptAttribute, template_id, openid, url, appid, pagepath, color);
 
     }
 }
